@@ -1,0 +1,9 @@
+# Rest API Server Port
+server:
+  port: 8090
+# Kafka
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: 127.0.0.1:8091
+

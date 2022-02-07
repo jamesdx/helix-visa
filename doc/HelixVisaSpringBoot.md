@@ -1,5 +1,5 @@
-#Spring Boot
-## 如果构建一个Spring Boot Maven 基础项目
+#SpringBoot 基础手册
+##如果构建一个Spring Boot Maven 基础项目
 * 添加 Spring Boot Parameter
     ```xml
     <parent>
@@ -58,12 +58,33 @@ SpringBoot 入口类，一共三点：
 * 添加 SpringBoot 基础配置文件
 在 resources 文件下，创建 `application.yml` ，它作为 SpringBoot 的配置文件。
 
+## 如何基于 SpringBoot 开发 Restful API
+
+### 如何构建 SpringBoot Restful 项目
+* 在 pom.xml 文件添加 spring web starter
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+```
+* 在 SpringBoot 配置文件添加 Server 
+```shell script
+
+server:
+  port: 8090
+```
+## 如何基于 SpringBoot 开发 CURD Restful API.
+* 使用 @RestController 注解 创建一个 Restful API 类
+* 创建一个 VO (View Object) , 来传递参数；
+* 定义CURD方法，来实现不同的类型API
+** GET/POST/DELETE/PUT
 
 
+## SpringBoot MVC
+SpringBoot 默认嵌入 Tomcat
 ## Spring Boot 配置文件
 ## Spring Boot 注解
-
-
 ## Resources
 * Spring Boot Initializer
     ```xml
